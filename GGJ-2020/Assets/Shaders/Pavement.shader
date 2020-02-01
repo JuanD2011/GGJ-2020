@@ -1,11 +1,11 @@
-﻿Shader "Custom/WeaponCoolDown"
+﻿Shader "Custom/Pavement"
 {
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
-        _ReloadingColor("Reloading Color", Color) = (1,0,0,1)
+        _DestroyedColor("Destroyed Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        [HideInInspector] _CurrentReloadingValue("Reloading Value", Range(0, 1)) = 0
+        _CurrentReloadingValue("Reloading Value", Range(0, 1)) = 0
     }
     SubShader
     {
@@ -18,7 +18,7 @@
 
         sampler2D _MainTex;
         fixed4 _Color;
-        fixed4 _ReloadingColor;
+        fixed4 _DestroyedColor;
         fixed _CurrentReloadingValue;
 
         struct Input
@@ -28,7 +28,7 @@
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * lerp(_Color, _ReloadingColor, _CurrentReloadingValue);
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * lerp(_DestroyedColor, _Color, _CurrentReloadingValue);
             o.Albedo = c.rgb;
         }
         ENDCG
