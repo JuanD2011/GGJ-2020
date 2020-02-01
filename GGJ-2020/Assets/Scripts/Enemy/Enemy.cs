@@ -9,6 +9,19 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public string Id { get => id; private set => id = value; }
 
+    EnemyMovement enemyMovement;
+
+    void Start()
+    {
+        enemyMovement = GetComponent<EnemyMovement>();
+    }
+
+    void Update()
+    {
+        enemyMovement.Movement();
+    }
+
+
     /// <summary>
     /// Take damage and check if the enemy is dead
     /// </summary>
@@ -32,5 +45,10 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         ISpoilable spoilableUnit = other.GetComponent<ISpoilable>();
         spoilableUnit?.Spoil(damagePerSecond);
+    }
+
+    public void OnLimit()
+    {
+        //TODO: DISABLE ENEMY
     }
 }

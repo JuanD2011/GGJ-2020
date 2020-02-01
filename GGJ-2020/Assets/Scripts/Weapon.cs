@@ -37,7 +37,8 @@ public class Weapon : MonoBehaviour
         {
             if (ammo > 0 && canShoot)
             {
-                Bullet newBullet = Instantiate(mBullet, gunMuzzlePos.position, Quaternion.identity);
+                Bullet newBullet = PoolService.Instance.GetGameObjectFromPool("Bullet").GetComponent<Bullet>();
+                newBullet.transform.position = gunMuzzlePos.position;
                 newBullet.transform.rotation = transform.rotation;
                 newBullet.Impulse(shootingForce);
                 ammo -= 1;
