@@ -39,7 +39,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Debug.Log("Spawn");
         Collider spawnVolume = spawnVolumes[Random.Range(0, spawnVolumes.Length)];
         Enemy enemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)].GetComponent<Enemy>();
         if (idle)
@@ -62,14 +61,12 @@ public class EnemySpawner : MonoBehaviour
 
     public void OnWaveStart()
     {
-        Debug.Log("Wave started");
         idle = false;
         tick = 0.5f;
     }
 
     public void OnWaveFinished()
     {
-        Debug.Log("Wave finished");
         idle = true;
         tick = 1f;
         if (waveNumber < levelData.levelData.waves.Count)
