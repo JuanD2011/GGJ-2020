@@ -40,6 +40,12 @@ public class Database : MonoBehaviour
 
         });
 
+        dbRef.Child("users").Child(Authentication.myUser.UserId).Child("currentLevel").GetValueAsync().ContinueWith(task =>
+        {
+
+            //currentLevelLocal =  task.Result
+        });
+
     }
 
 }
