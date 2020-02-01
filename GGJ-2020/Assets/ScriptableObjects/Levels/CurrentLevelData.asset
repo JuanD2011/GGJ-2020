@@ -12,3 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb240f7c0c4915d49bb476e713e051c3, type: 3}
   m_Name: CurrentLevelData
   m_EditorClassIdentifier: 
+  levelData:
+    duration: 60
+    idleEnemies:
+    - id: enemy_normal
+      probability: 0.5
+    waves:
+    - waveTime: 20
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.5
+    - waveTime: 40
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.5
