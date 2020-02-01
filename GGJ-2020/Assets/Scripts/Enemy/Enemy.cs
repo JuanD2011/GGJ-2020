@@ -27,4 +27,10 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         gameObject.SetActive(false);
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        ISpoilable spoilableUnit = other.GetComponent<ISpoilable>();
+        spoilableUnit?.Spoil(damagePerSecond);
+    }
 }
