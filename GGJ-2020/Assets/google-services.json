@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "427083922676",
+    "firebase_url": "https://ggj-2020.firebaseio.com",
+    "project_id": "ggj-2020",
+    "storage_bucket": "ggj-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427083922676:android:c09ecf289d46b30ad8b2a1",
+        "android_client_info": {
+          "package_name": "com.OcasoGames.Cemento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427083922676-rg0ig1i7f1m35eg8e6a50067rmu91p20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoNZLbeNUTbEhr8uo33uqsLuV28i_Ex2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427083922676-rg0ig1i7f1m35eg8e6a50067rmu91p20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
