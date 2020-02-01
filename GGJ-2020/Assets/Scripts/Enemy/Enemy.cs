@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] protected float speed = 1f;
     [SerializeField] protected float damagePerSecond = 0.4f;
 
+    public string Id { get => id; private set => id = value; }
+
     /// <summary>
     /// Take damage and check if the enemy is dead
     /// </summary>
