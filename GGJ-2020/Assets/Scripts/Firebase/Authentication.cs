@@ -1,13 +1,15 @@
 ﻿using Firebase.Auth;
+using System.Collections;
 using UnityEngine;
 
 public class Authentication : MonoBehaviour
 {
     FirebaseAuth auth;
-    FirebaseUser myUser;
+    public static FirebaseUser myUser;
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return FirebaseDependencies.waitUntilCheckDependencies;
         auth = FirebaseAuth.DefaultInstance;
         AnonymousAuth();
         auth.StateChanged += AuthStateChanged;
@@ -40,6 +42,9 @@ public class Authentication : MonoBehaviour
                 Debug.LogFormat("Task was faulted: {0}", task.Exception);
 
             myUser = task.Result;
+            UserFB userFB = new UserFB { currentLevel = "0", name = "VIVAELPERICO", userID = myUser.UserId };
+
+            Database.DB.WriteUser(userFB);
             Debug.LogFormat("User signed in successfully: {0} ({1})", myUser.DisplayName, myUser.UserId);
         });
     }
