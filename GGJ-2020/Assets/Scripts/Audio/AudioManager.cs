@@ -36,10 +36,11 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
         CreateAudioSources(audioSourcesAmount);
     }

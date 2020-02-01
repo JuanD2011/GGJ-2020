@@ -4,23 +4,36 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager instance = null;
+
     private AsyncOperation operation = null;
 
-    private MenuManager menuManager = null;
-
-    protected virtual void Awake()
+    private void Awake()
     {
-        menuManager = GetComponent<MenuManager>();
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    protected virtual void Start()
-    {
-         menuManager.OnLoadLevel += LoadLevel;
-    }
-
-    private void LoadLevel(string _levelBuildId)
+    public void LoadLevel(string _levelBuildId)
     {
         StartCoroutine(LoadAsynchronously(_levelBuildId));
+    }
+
+    public void LoadSameLevel()
+    {
+        StartCoroutine(LoadAsynchronously(SceneManager.GetActiveScene().name));
+    }
+
+    public void LoadHome()
+    {
+        StartCoroutine(LoadAsynchronously("Menu"));
     }
 
     protected IEnumerator LoadAsynchronously(string _levelBuildId)
