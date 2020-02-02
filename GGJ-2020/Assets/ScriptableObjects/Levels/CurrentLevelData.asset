@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelData:
     duration: 60
+    pavementModulesNumber: 5
     idleEnemies:
     - id: enemy_normal
       probability: 0.5
@@ -28,3 +29,5 @@ MonoBehaviour:
       waveEnemies:
       - id: enemy_normal
         probability: 0.5
+  pavementStatus: 0.80399925
+  insanityPercentage: 0

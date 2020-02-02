@@ -13,26 +13,29 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
-        gameTime += Time.deltaTime;
-        if(gameTime >= levelData.levelData.waves[waveNumber].waveTime)
+        if (!PauseManager.paused)
         {
-            waveTime += Time.deltaTime;
-            if (!inWave)
+            gameTime += Time.deltaTime;
+            if (gameTime >= levelData.levelData.waves[waveNumber].waveTime)
             {
-                OnWaveStart.Raise();
-                inWave = true;
-            }
-            if (waveTime >= levelData.levelData.waves[waveNumber].waveDuration)
-            {
-                if (waveNumber < levelData.levelData.waves.Count - 1) waveNumber++;
-                waveTime = 0f;
-                if (inWave)
+                waveTime += Time.deltaTime;
+                if (!inWave)
                 {
-                    OnWaveFinished.Raise();
-                    inWave = false;
+                    OnWaveStart.Raise();
+                    inWave = true;
+                }
+                if (waveTime >= levelData.levelData.waves[waveNumber].waveDuration)
+                {
+                    if (waveNumber < levelData.levelData.waves.Count - 1) waveNumber++;
+                    waveTime = 0f;
+                    if (inWave)
+                    {
+                        OnWaveFinished.Raise();
+                        inWave = false;
+                    }
                 }
             }
+            if (gameTime > levelData.levelData.duration) OnLevelFinished.Raise(); 
         }
-        if (gameTime > levelData.levelData.duration) OnLevelFinished.Raise();
     }
 }

@@ -36,26 +36,28 @@ public class Weapon : MonoBehaviour
     /// </summary>
     public void Shoot()
     {
-        try
+        if (!PauseManager.paused)
         {
-            if (ammo > 0 && canShoot)
+            try
             {
-                if (!useMultipleShots) ShootRound();
-                else
-                    for (int i = 0; i < useMultipleCount; i++)
-                        ShootRound();
-                OneShotParticles ps = PoolService.Instance.GetGameObjectFromPool("BulletVFX")
-                    .GetComponent<OneShotParticles>();
-                ps.transform.position = gunMuzzlePos.position;
-                ps.transform.rotation = gunMuzzlePos.rotation;
-                ps.StartParticles();
-                ammo -= 1;
-                StartCoroutine(Refresh());
-                if (ammo == 0) StartCoroutine(Reload());
-            }
+                if (ammo > 0 && canShoot)
+                {
+                    if (!useMultipleShots) ShootRound();
+                    else
+                    {
+                        for (int i = 0; i < useMultipleCount; i++)
+                        {
+                            ShootRound();
+                        }
+                    }
+                    ammo -= 1;
+                    StartCoroutine(Refresh());
+                    if (ammo == 0) StartCoroutine(Reload());
+                }
 
+            }
+            catch { Debug.LogError("Bullet in weapon is not instantiated!"); } 
         }
-        catch { Debug.LogError("Bullet in weapon is not instantiated!"); }
     }
 
     private void ShootRound()

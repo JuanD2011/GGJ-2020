@@ -31,11 +31,14 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (tickTimer < tick) tickTimer += Time.deltaTime;
-        else
+        if (!PauseManager.paused)
         {
-            tickTimer = 0f;
-            SpawnEnemy();
+            if (tickTimer < tick) tickTimer += Time.deltaTime;
+            else
+            {
+                tickTimer = 0f;
+                SpawnEnemy();
+            } 
         }
     }
 
@@ -71,7 +74,7 @@ public class EnemySpawner : MonoBehaviour
     {
         idle = true;
         tick = 1f;
-        if (waveNumber < levelData.levelData.waves.Count)
+        if (waveNumber < levelData.levelData.waves.Count - 1)
         {
             waveNumber++;
             enemyWave = LevelData.levelData.waves[waveNumber].waveEnemies.ToDictionary(x => x.id, x => x.probability);
