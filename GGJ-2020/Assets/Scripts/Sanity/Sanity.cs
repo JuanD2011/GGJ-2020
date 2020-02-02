@@ -26,7 +26,7 @@ public class Sanity : MonoBehaviour
     private void OnPavementDamaged(float _damage)
     {
         insanityPercentage += (1f - levelData.pavementStatus) * _damage;
-        StartCoroutine(UpdateFill());
+        LeanTween.value(fill.fillAmount, insanityPercentage, 1f).setEase(easeType).setOnUpdate((float _value) => UpdateFill(_value));
         
         if (insanityPercentage >= 1)
         {
@@ -35,14 +35,8 @@ public class Sanity : MonoBehaviour
         }
     }
 
-    private IEnumerator UpdateFill()
+    private void UpdateFill(float _value)
     {
-        float elapsedTime = 0f;
-        while (elapsedTime < 1f)
-        {
-            fill.fillAmount = Mathf.Lerp(fill.fillAmount, insanityPercentage, elapsedTime / 1f);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
+        fill.fillAmount = insanityPercentage;
     }
 }
