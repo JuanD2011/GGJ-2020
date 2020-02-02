@@ -52,7 +52,9 @@ public class Weapon : MonoBehaviour
                     }
                     ammo -= 1;
                     StartCoroutine(Refresh());
+                    ShootVFX();
                     if (ammo == 0) StartCoroutine(Reload());
+
                 }
 
             }
@@ -68,6 +70,14 @@ public class Weapon : MonoBehaviour
             Random.Range(transform.eulerAngles.y - shotDispersionAngle, transform.eulerAngles.y + shotDispersionAngle), 
             transform.eulerAngles.z));
         newBullet.Impulse(shootingForce);
+    }
+
+    private void ShootVFX()
+    {
+        OneShotParticles ps = PoolService.Instance.GetGameObjectFromPool("BulletVFX").GetComponent<OneShotParticles>();
+        ps.transform.position = gunMuzzlePos.position;
+        ps.transform.rotation = gunMuzzlePos.rotation;
+        ps.StartParticles();
     }
 
     /// <summary>
