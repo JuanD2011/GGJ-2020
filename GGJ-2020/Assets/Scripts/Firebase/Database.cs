@@ -2,6 +2,9 @@
 using Firebase.Database;
 using Firebase;
 using Firebase.Unity.Editor;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 public class Database : MonoBehaviour
 {
@@ -39,12 +42,35 @@ public class Database : MonoBehaviour
             }
 
         });
+    }
 
-        dbRef.Child("users").Child(Authentication.myUser.UserId).Child("currentLevel").GetValueAsync().ContinueWith(task =>
+    public async Task<List<Dictionary<string,string>>> GetUserList()
+    {
+        string json = string.Empty;
+
+        List<Dictionary<string, string>> userList = new List<Dictionary<string, string>>();
+        int index = 0;
+
+        await dbRef.Child("users").GetValueAsync().ContinueWith(task =>
         {
+            if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                foreach(DataSnapshot data in snapshot.Children)
+                {                    
+                    json = data.GetRawJsonValue();
+                    Dictionary<string,string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+                    userList.Add(values);
+                    Debug.Log(json);
+                    Debug.LogFormat("Current level of {0} is: {1}", userList[index]["name"], userList[index]["currentLevel"]);
+                    index++;
 
-            //currentLevelLocal =  task.Result
+                }                      
+                Debug.Log("Get Player Data As JSON Succesful");                
+            }
         });
+
+        return userList;
 
     }
 
