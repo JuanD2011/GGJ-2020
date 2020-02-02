@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        IDamageable damageableUnit = GetComponent<IDamageable>();
+        IDamageable damageableUnit = other.GetComponent<IDamageable>();
         if (damageableUnit != null)
         {
             damageableUnit.Damage(damage);

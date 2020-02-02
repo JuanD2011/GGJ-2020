@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cdc4e1f82afb11f4fb52640f233f4fbe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: enemy_normal
-  health: 1
   speed: 1
   damagePerSecond: 0.4
+  initialHealth: 4
 --- !u!114 &-7202132062816976132
 MonoBehaviour:
   m_ObjectHideFlags: 0
