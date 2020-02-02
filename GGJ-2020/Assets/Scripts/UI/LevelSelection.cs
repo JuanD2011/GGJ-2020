@@ -23,6 +23,10 @@ public class LevelSelection : MonoBehaviour
         id = $"Level{_levelNumber}";
         levelNumber = _levelNumber;
         m_Text.SetText($"Level {_levelNumber}");
-        m_Button.onClick.AddListener(() => LevelManager.instance.LoadLevel(id));
+        m_Button.onClick.AddListener(() =>
+        {
+            LevelManager.instance.LoadLevel(id);
+            AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.gunShot, 1f, false);
+        });
     }
 }

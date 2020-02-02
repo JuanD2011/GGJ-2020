@@ -16,6 +16,7 @@ public class AudioClips : ScriptableObject
     public AudioClip cat = null;
     public AudioClip oldWoman = null;
 
-    public AudioClip reload = null;
-    public AudioClip shoot = null;
+    public AudioClip gunReload = null;
+    public AudioClip gunShot = null;
+    public AudioClip gunBullet = null;
 }
