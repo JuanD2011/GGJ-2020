@@ -376,6 +376,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5223540136192338072}
     m_Modifications:
+    - target: {fileID: 1066751031, guid: 8d730b068cfb7c040b098104f66161df, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 16.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066751031, guid: 8d730b068cfb7c040b098104f66161df, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 16.52
+      objectReference: {fileID: 0}
     - target: {fileID: 1066751033, guid: 8d730b068cfb7c040b098104f66161df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -391,7 +399,7 @@ PrefabInstance:
     - target: {fileID: 1066751034, guid: 8d730b068cfb7c040b098104f66161df, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 13166637b98efc044afd35d2f2cb6124,
+      objectReference: {fileID: 21300000, guid: fcaf482d5d02edb409133a40fd9c2a65,
         type: 3}
     - target: {fileID: 1066751034, guid: 8d730b068cfb7c040b098104f66161df, type: 3}
       propertyPath: m_Type

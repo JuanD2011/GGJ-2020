@@ -861,6 +861,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5722215971178110203}
     m_Modifications:
+    - target: {fileID: 245566376231324212, guid: 8bdc07f6cebb95741ad926481c0a917a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245566376231324212, guid: 8bdc07f6cebb95741ad926481c0a917a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 16.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 245566376231324212, guid: 8bdc07f6cebb95741ad926481c0a917a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245566376231324212, guid: 8bdc07f6cebb95741ad926481c0a917a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 16.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 245566376231324217, guid: 8bdc07f6cebb95741ad926481c0a917a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fcaf482d5d02edb409133a40fd9c2a65,
+        type: 3}
     - target: {fileID: 245566376231324218, guid: 8bdc07f6cebb95741ad926481c0a917a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
