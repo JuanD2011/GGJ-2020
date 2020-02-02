@@ -19,10 +19,15 @@ public class Player : MonoBehaviour
     private RaycastHit previousFrameRayHit = new RaycastHit();
     private PlayerState mCurrentState = PlayerState.Attacking;
     private bool onPavement = false;
+    private LayerMask layerMask;
 
     private void Awake() => mWeapon = GetComponentInChildren<Weapon>();
 
-    private void Start() => ButtonPlayerStateChanger.OnChangePlayerState += ChangeState;
+    private void Start()
+    {
+        layerMask = LayerMask.GetMask("RayCaster");
+        ButtonPlayerStateChanger.OnChangePlayerState += ChangeState;
+    }
 
     void Update()
     {
