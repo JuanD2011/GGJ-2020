@@ -31,11 +31,14 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (tickTimer < tick) tickTimer += Time.deltaTime;
-        else
+        if (!PauseManager.paused)
         {
-            tickTimer = 0f;
-            SpawnEnemy();
+            if (tickTimer < tick) tickTimer += Time.deltaTime;
+            else
+            {
+                tickTimer = 0f;
+                SpawnEnemy();
+            } 
         }
     }
 

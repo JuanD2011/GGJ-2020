@@ -34,17 +34,20 @@ public class Enemy : MonoBehaviour, IDamageable
 
     void Update()
     {
-        enemyMovement.Movement();
-        if (stayOnTrigger)
+        if (!PauseManager.paused)
         {
-            timer += Time.deltaTime;
-            if (timer >= 1f)
+            enemyMovement.Movement();
+            if (stayOnTrigger)
             {
-                timer = 0f;
-                spoilableUnit?.Spoil(damagePerSecond);
+                timer += Time.deltaTime;
+                if (timer >= 1f)
+                {
+                    timer = 0f;
+                    spoilableUnit?.Spoil(damagePerSecond);
+                }
             }
+            else timer = 0f; 
         }
-        else timer = 0f;
     }
 
 
