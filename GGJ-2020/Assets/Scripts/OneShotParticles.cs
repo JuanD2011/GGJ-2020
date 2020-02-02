@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class OneShotParticles : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem[] particleSystems;
     [SerializeField] private string vfxNamePooling;
+    private ParticleSystem parentParticle;
 
-    public void StartParticles()
-    {
-        print("Hello");
-        foreach(ParticleSystem ps in particleSystems)
-            ps.Play();
-        StartCoroutine(DisableOnEndingFX());
-    }
+    private void Awake() => parentParticle = GetComponent<ParticleSystem>();
+
+    public void StartParticles() => parentParticle.Play();
+
+    private void OnDisable() => PoolService.Instance.ReturnGameObjectToPools(gameObject, vfxNamePooling);
 }
