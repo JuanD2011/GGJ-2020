@@ -11,6 +11,11 @@ public class Enemy : MonoBehaviour, IDamageable
     private MaterialPropertyBlock mProperties;
 
 
+    private bool stayOnTrigger = false;
+    private float timer = 0f;
+
+    private ISpoilable spoilableUnit = null;
+
     public string Id { get => id; private set => id = value; }
 
     EnemyMovement enemyMovement;
@@ -30,6 +35,16 @@ public class Enemy : MonoBehaviour, IDamageable
     void Update()
     {
         enemyMovement.Movement();
+        if (stayOnTrigger)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 1f)
+            {
+                timer = 0f;
+                spoilableUnit.Spoil(damagePerSecond);
+            }
+        }
+        else timer = 0f;
     }
 
 
@@ -53,10 +68,20 @@ public class Enemy : MonoBehaviour, IDamageable
         gameObject.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        ISpoilable spoilableUnit = other.GetComponent<ISpoilable>();
-        spoilableUnit?.Spoil(damagePerSecond);
+        spoilableUnit = other.GetComponent<ISpoilable>();
+        if (spoilableUnit != null && stayOnTrigger == false)
+        {
+            stayOnTrigger = true;
+            spoilableUnit.Spoil(damagePerSecond);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        spoilableUnit = other.GetComponent<ISpoilable>();
+        if (spoilableUnit != null) stayOnTrigger = false;
     }
 
     public void OnLimit()
