@@ -6,11 +6,15 @@ public class LevelSelectionmanager : MonoBehaviour
 
     private LevelSelection[] levelSelections = null;
 
-    private void Awake()
+    private async void Awake()
     {
         levelSelections = levelContent.GetComponentsInChildren<LevelSelection>();
 
-        for (int i = 0; i < levelSelections.Length; i++)
+        int currentLevel = await Database.DB.GetCurrentLevel();
+
+        levelSelections[0].Initialize(1);
+
+        for (int i = 0; i < currentLevel; i++)
         {
             levelSelections[i].Initialize(i + 1);
         }

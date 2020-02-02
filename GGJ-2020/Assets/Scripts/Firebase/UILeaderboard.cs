@@ -24,9 +24,10 @@ public class UILeaderboard : MonoBehaviour
         for (int i = 0; i < lenght; i++)
         {
             //Instantiate(leaderBoardHeader, usersContainer);
-            usersContainer.GetChild(i).GetChild(1).GetComponent<TextMeshProUGUI>().text = (i + 1).ToString();
-            usersContainer.GetChild(i).GetChild(2).GetComponent<TextMeshProUGUI>().text = friendsData[i]["name"];
-            usersContainer.GetChild(i).GetChild(3).GetComponent<TextMeshProUGUI>().text = friendsData[i]["currentLevel"];
+            usersContainer.GetChild(i).gameObject.SetActive(true);
+            usersContainer.GetChild(i).GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{i + 1}.";
+            usersContainer.GetChild(i).GetChild(1).GetComponent<TextMeshProUGUI>().text = friendsData[i]["name"];
+            usersContainer.GetChild(i).GetChild(2).GetComponent<TextMeshProUGUI>().text = friendsData[i]["currentLevel"];
         }
     }
 }

@@ -380,9 +380,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 885f0590d9f10c24eae10eee364e188d, type: 2}
-  m_sharedMaterial: {fileID: -5649650748772837479, guid: 885f0590d9f10c24eae10eee364e188d,
-    type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -594,7 +593,7 @@ MonoBehaviour:
 
     Elizabeth Correa
 
-    Simon
+    Simon Sierra
 
     Alejandra Roa
 
@@ -604,15 +603,20 @@ MonoBehaviour:
     Bedoya</size>
 
 
-    <size=85%>VFX Artist</size>
+    <size=85%>Audio</size>
+
+    <size=50%>Zenith Infinitive</size>
+
+
+    <size=85%>VFX
+    Artist</size>
 
     <size=50%>Daniel Serna</size>
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 885f0590d9f10c24eae10eee364e188d, type: 2}
-  m_sharedMaterial: {fileID: -5649650748772837479, guid: 885f0590d9f10c24eae10eee364e188d,
-    type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -25,6 +25,21 @@ public class Database : MonoBehaviour
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://ggj-2020.firebaseio.com/");
     }
 
+    public async Task<int> GetCurrentLevel()
+    {
+        int result = 0;
+        await dbRef.Child("users").Child(Authentication.myUser.UserId).Child("currentLevel").GetValueAsync().ContinueWith(task =>
+        {
+            result = int.Parse(task.Result.Value.ToString());
+        });
+        return result;
+    }
+
+    public async Task SetCurrentLevel(int _currentLevel)
+    {
+        await dbRef.Child("users").Child(Authentication.myUser.UserId).Child("currentLevel").SetValueAsync(_currentLevel);
+    }
+
     public void WriteUser(UserFB user)
     {
         Debug.Log("Writing new user in database bitch...");

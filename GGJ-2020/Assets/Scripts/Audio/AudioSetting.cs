@@ -6,7 +6,7 @@ public class AudioSetting : UIButtonBase
     [SerializeField] private Settings settings = null;
 
     [SerializeField] private Image m_Image = null;
-    [SerializeField] private Color enabledColor = new Color(0, 149, 135), disabledColor = Color.red;
+    [SerializeField] private Image muted = null;
 
     [SerializeField] private AudioType m_Type = AudioType.None;
 
@@ -35,21 +35,21 @@ public class AudioSetting : UIButtonBase
             case AudioType.Music:
                 if (settings.isMusicActive)
                 {
-                    m_Image.color = enabledColor;
+                    muted.enabled = false;
                 }
                 else
                 {
-                    m_Image.color = disabledColor;
+                    muted.enabled = true;
                 }
                 break;
             case AudioType.SFX:
                 if (settings.isSFXActive)
                 {
-                    m_Image.color = enabledColor;
+                    muted.enabled = false;
                 }
                 else
                 {
-                    m_Image.color = disabledColor;
+                    muted.enabled = true;
                 }
                 break;
             default:
