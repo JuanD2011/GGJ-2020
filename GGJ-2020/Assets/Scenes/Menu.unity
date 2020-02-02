@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8dd200573462eac468e833e713df73b4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -493,7 +493,7 @@ Camera:
   m_GameObject: {fileID: 1879370650}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.065592736, g: 0.09733178, b: 0.20754719, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1354,6 +1354,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2582236975708914452, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21698111
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582236975708914452, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.21698111
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582236975708914452, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.21698111
+      objectReference: {fileID: 0}
     - target: {fileID: 5570918733470546180, guid: 04433c5c0900486429eea74f448fcef6,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -1363,6 +1378,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: -54.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589227251553674585, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589227251553674585, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589227251553674585, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589227251553674585, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589227251553674585, guid: 04433c5c0900486429eea74f448fcef6,
+        type: 3}
+      propertyPath: m_ChildAlignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7150430367228921462, guid: 04433c5c0900486429eea74f448fcef6,
         type: 3}
@@ -1873,6 +1913,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -30.0238
       objectReference: {fileID: 0}
+    - target: {fileID: 4467303716365029536, guid: b561dc52869f90a4d85699fa9b4ace02,
+        type: 3}
+      propertyPath: m_Spacing
+      value: 58.74
+      objectReference: {fileID: 0}
     - target: {fileID: 4467303716365029597, guid: b561dc52869f90a4d85699fa9b4ace02,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1936,7 +1981,7 @@ PrefabInstance:
     - target: {fileID: 6540789638253303982, guid: b561dc52869f90a4d85699fa9b4ace02,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.34120178
+      value: 0.34119987
       objectReference: {fileID: 0}
     - target: {fileID: 7665365292449449063, guid: b561dc52869f90a4d85699fa9b4ace02,
         type: 3}

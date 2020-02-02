@@ -70,8 +70,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     protected void OnDead()
     {
-        gameObject.SetActive(false);
+        AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.dead, 1f, false);
         ShootVFX();
+        gameObject.SetActive(false);
     }
 
     private void ShootVFX()

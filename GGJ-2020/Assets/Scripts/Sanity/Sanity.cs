@@ -35,6 +35,14 @@ public class Sanity : MonoBehaviour
     {
         insanityPercentage += (1f - levelData.pavementStatus) * _damage;
         LeanTween.value(fill.fillAmount, insanityPercentage, 1f).setEase(easeType).setOnUpdate((float _value) => UpdateFill(_value));
+
+        float random = Random.Range(0f, 1f);
+
+        if (random > 0.5f)
+        {
+            int clip = Random.Range(0, AudioManager.Instance.audioClips.angryCharacter.Length);
+            AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.angryCharacter[clip], 1f, false);
+        }
         
         if (insanityPercentage >= 1)
         {

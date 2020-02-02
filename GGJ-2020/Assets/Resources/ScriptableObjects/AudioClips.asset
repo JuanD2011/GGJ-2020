@@ -14,10 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 8300000, guid: 187fd9b0eeb13334ea45cc2a2514a9d8, type: 3}
   defaultButton: {fileID: 8300000, guid: de7320177324ddc428102970f4f5e92e, type: 3}
+  city: {fileID: 8300000, guid: 66658d70879fbff4291250f9d01684df, type: 3}
   winner: {fileID: 8300000, guid: 90685d1ad9be14048b66dabac5fdb066, type: 3}
   gameOver: {fileID: 8300000, guid: 39a6f06a4ebe8db48b87299b4f8f8d66, type: 3}
   cat: {fileID: 8300000, guid: 11a145ba747a0ca4985ff5019bcd52f2, type: 3}
   oldWoman: {fileID: 8300000, guid: 0cf8992dc6336a7459fa022b0d9a0aff, type: 3}
+  trycicle: {fileID: 8300000, guid: d502ef7eb29a73e4b89e861c13bf3d56, type: 3}
   gunReload: {fileID: 8300000, guid: 7bfce5d652e2c7d40934ad36068c6774, type: 3}
   gunShot: {fileID: 8300000, guid: c6d6ab32b5d1c5c4a88e5d5b62a062a8, type: 3}
   gunBullet: {fileID: 8300000, guid: dfd901ded6749ab49ac07777a8c7cd6e, type: 3}
+  dead: {fileID: 8300000, guid: cc18177b13607574fb342dc3bb24c463, type: 3}
+  perfectCement: {fileID: 8300000, guid: fc9dd745e0f9f1c4fa1ff29c7ead0fbb, type: 3}
+  revokingWall: {fileID: 8300000, guid: fd0730b53fa82e842a153f2c63d70ef8, type: 3}
+  angryCharacter:
+  - {fileID: 8300000, guid: 21057955c3d5cdd4cbdb112c9f5dda71, type: 3}
+  - {fileID: 8300000, guid: f2be2131f27b17e48be94307a65f9d5d, type: 3}
+  - {fileID: 8300000, guid: 09749c95728622147a4fc919f2e33fcb, type: 3}
+  - {fileID: 8300000, guid: 0c1605677a4686242aefc83822ff342f, type: 3}
+  - {fileID: 8300000, guid: c07127b1bf436084a947fe7c444e8fc7, type: 3}
+  - {fileID: 8300000, guid: bb7d0796d3249b34caaa2a3aaf2fcf09, type: 3}
+  - {fileID: 8300000, guid: e26b4158a9523c448b7642cfaedc35b6, type: 3}
+  - {fileID: 8300000, guid: dff8c7d31457f0144badc604c859e85a, type: 3}
+  - {fileID: 8300000, guid: d438099d3d993ae43b1f4c6b59263cc7, type: 3}
+  - {fileID: 8300000, guid: 3aaf038992ab14c498ad0732af353f75, type: 3}
+  - {fileID: 8300000, guid: 51916aca6247591439f1a4b78dbb0852, type: 3}

@@ -37,9 +37,15 @@ public class LevelSelection : MonoBehaviour
 
         m_Button.onClick.AddListener(() =>
         {
+            LevelInfo.number = levelNumber;
             currentLevelData.levelData = levelsData.levelsData[levelNumber - 1];
-            LevelManager.instance.LoadLevel(id);
+            LevelManager.instance.LoadLevel("Level1");
             AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.gunShot, 1f, false);
         });
     }
+}
+
+public static class LevelInfo
+{
+    public static int number = 0;
 }
