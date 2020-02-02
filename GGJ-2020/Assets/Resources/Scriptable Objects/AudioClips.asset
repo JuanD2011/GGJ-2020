@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f29af7281885cb4aba03bcc198279aa, type: 3}
   m_Name: AudioClips
   m_EditorClassIdentifier: 
-  inGameMusic: {fileID: 8300000, guid: d17ce864d4ed0ab4dbc09b90d2fadaaf, type: 3}
-  defaultButton: {fileID: 8300000, guid: a0b1e3ee9a59a8d40891fba5ded9741a, type: 3}
-  acceptButton: {fileID: 0}
-  cancelButton: {fileID: 0}
-  notificationAlert: {fileID: 0}
+  music: {fileID: 8300000, guid: 187fd9b0eeb13334ea45cc2a2514a9d8, type: 3}
+  defaultButton: {fileID: 8300000, guid: de7320177324ddc428102970f4f5e92e, type: 3}
+  winner: {fileID: 8300000, guid: 90685d1ad9be14048b66dabac5fdb066, type: 3}
+  gameOver: {fileID: 8300000, guid: 39a6f06a4ebe8db48b87299b4f8f8d66, type: 3}
+  cat: {fileID: 8300000, guid: 11a145ba747a0ca4985ff5019bcd52f2, type: 3}
+  oldWoman: {fileID: 8300000, guid: 0cf8992dc6336a7459fa022b0d9a0aff, type: 3}
+  reload: {fileID: 0}
+  shoot: {fileID: 0}
