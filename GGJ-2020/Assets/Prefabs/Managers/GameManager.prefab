@@ -51,6 +51,9 @@ MonoBehaviour:
   levelData: {fileID: 11400000, guid: ab4edfb23f7b9024bb047946067f6966, type: 2}
   enemyPrefabs:
   - {fileID: 7518682149905807890, guid: 368d784b681b44549b139ea8b3e96516, type: 3}
+  - {fileID: 9158101850612664959, guid: 7880caa3ab456854c955fc5cd86fb054, type: 3}
+  - {fileID: 4771391224284723915, guid: 303b9a0de5cf9d54eafb68d22b1c2a6b, type: 3}
+  - {fileID: 812883291222540992, guid: cb3a3762cfcf26e42a59e7f226d56e02, type: 3}
   spawnVolumesParent: {fileID: 0}
 --- !u!114 &8812657695219856855
 MonoBehaviour:
