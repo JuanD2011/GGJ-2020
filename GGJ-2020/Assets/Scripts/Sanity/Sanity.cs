@@ -14,7 +14,7 @@ public class Sanity : MonoBehaviour
 
     private float insanityPercentage = 0f;
 
-    private void OnEnable()
+    private void Start()
     {
         pavements = pavementsParent.GetComponentsInChildren<Pavement>();
         foreach (Pavement pavement in pavements)
@@ -23,7 +23,7 @@ public class Sanity : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         foreach (Pavement pavement in pavements)
         {
@@ -34,7 +34,6 @@ public class Sanity : MonoBehaviour
     private void OnPavementDamaged(float _damage)
     {
         insanityPercentage += (1f - levelData.pavementStatus) * _damage;
-        Debug.Log(insanityPercentage);
         LeanTween.value(fill.fillAmount, insanityPercentage, 1f).setEase(easeType).setOnUpdate((float _value) => UpdateFill(_value));
         
         if (insanityPercentage >= 1)
