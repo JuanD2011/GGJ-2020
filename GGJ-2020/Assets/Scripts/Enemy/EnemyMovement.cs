@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         direction = CheckLimits.LeftOrRight(transform.position) ? -1 : 1;
+        if (direction == -1) transform.eulerAngles = new Vector3(0, 90, 0);
         speed = EnemyController.CalculateVelocity(speed, 1);
     }
 

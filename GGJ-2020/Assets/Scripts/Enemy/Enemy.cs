@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(EnemyMovement))]
+[RequireComponent(typeof(TrailTexture))]
 public class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField] private string id = "";
