@@ -259,6 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
         type: 3}
+      propertyPath: spawnVolumes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
+        type: 3}
       propertyPath: spawnVolumes.Array.data[0]
       value: 
       objectReference: {fileID: 1653830617}
@@ -266,7 +271,22 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnVolumes.Array.data[1]
       value: 
-      objectReference: {fileID: 1653830616}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
+        type: 3}
+      propertyPath: spawnVolumes.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
+        type: 3}
+      propertyPath: spawnVolumes.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
+        type: 3}
+      propertyPath: spawnVolumesParent
+      value: 
+      objectReference: {fileID: 1153517291}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e33b39fa8cb7fe549be0e9fb36588fc3, type: 3}
 --- !u!1001 &180630741
@@ -758,6 +778,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 180630741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1153517291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4388843096063340449, guid: 2588ac01ee4574948aa1af997b9557e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1653830615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1203295120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,12 +1031,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2588ac01ee4574948aa1af997b9557e4, type: 3}
---- !u!65 &1653830616 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4388843095706092413, guid: 2588ac01ee4574948aa1af997b9557e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1653830615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1653830617 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 4388843095789353024, guid: 2588ac01ee4574948aa1af997b9557e4,
