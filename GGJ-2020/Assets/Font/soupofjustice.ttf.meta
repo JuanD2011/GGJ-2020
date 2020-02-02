@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e66b80c9b07bd34e9ea06df24d54af5
+guid: 72332e71689588241998fcd0e6842166
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Bumper Sticker DEMO
+  fontName: Soup of Justice
   fontNames:
-  - Bumper Sticker DEMO
+  - Soup of Justice
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
