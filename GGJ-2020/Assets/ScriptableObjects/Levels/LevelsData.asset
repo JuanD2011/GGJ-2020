@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1130214f64d5b5a46a10ab73c02ddffc, type: 3}
+  m_Name: LevelsData
+  m_EditorClassIdentifier: 
+  levelsData:
+  - duration: 60
+    pavementModulesNumber: 2
+    idleEnemies:
+    - id: enemy_normal
+      probability: 0.4
+    waves:
+    - waveTime: 40
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.5
+  - duration: 60
+    pavementModulesNumber: 3
+    idleEnemies:
+    - id: enemy_normal
+      probability: 0.5
+    - id: enemy_cat
+      probability: 0.15
+    waves:
+    - waveTime: 20
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.5
+      - id: enemy_cat
+        probability: 0.3
+    - waveTime: 50
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.75
+      - id: enemy_cat
+        probability: 0.4
+  - duration: 90
+    pavementModulesNumber: 3
+    idleEnemies:
+    - id: enemy_normal
+      probability: 0.4
+    - id: enemy_cat
+      probability: 0.2
+    - id: enemy_grandma
+      probability: 0.15
+    waves:
+    - waveTime: 20
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.5
+      - id: enemy_cat
+        probability: 0.2
+      - id: enemy_grandma
+        probability: 0.3
+    - waveTime: 60
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.4
+      - id: enemy_cat
+        probability: 0.4
+      - id: enemy_grandma
+        probability: 0.3
+  - duration: 90
+    pavementModulesNumber: 4
+    idleEnemies:
+    - id: enemy_normal
+      probability: 0.5
+    - id: enemy_cat
+      probability: 0.3
+    - id: enemy_grandma
+      probability: 0.2
+    - id: enemy_tricycle
+      probability: 0.1
+    waves:
+    - waveTime: 20
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.5
+      - id: enemy_cat
+        probability: 0.2
+      - id: enemy_grandma
+        probability: 0.3
+      - id: enemy_tricycle
+        probability: 0.4
+    - waveTime: 60
+      waveDuration: 10
+      waveEnemies:
+      - id: enemy_normal
+        probability: 0.3
+      - id: enemy_cat
+        probability: 0.3
+      - id: enemy_grandma
+        probability: 0.3
+      - id: enemy_tricycle
+        probability: 0.4

@@ -71,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
     {
         idle = true;
         tick = 1f;
-        if (waveNumber < levelData.levelData.waves.Count)
+        if (waveNumber < levelData.levelData.waves.Count - 1)
         {
             waveNumber++;
             enemyWave = LevelData.levelData.waves[waveNumber].waveEnemies.ToDictionary(x => x.id, x => x.probability);
