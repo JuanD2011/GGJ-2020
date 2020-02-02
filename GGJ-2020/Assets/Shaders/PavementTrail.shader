@@ -3,7 +3,9 @@
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _DestroyedColor("Destroyed Color", Color) = (1,1,1,1)
+        _MainTex("Albedo (RGB)", 2D) = "white" {}
+        _CurrentReloadingValue("Reloading Value", Range(0, 1)) = 0
         _Splat("Splat Render Texture", 2D) = "black" {}
     }
     SubShader
@@ -28,12 +30,14 @@
         sampler2D _MainTex;
         sampler2D _Splat;
         fixed4 _Color;
+        fixed4 _DestroyedColor;
+        fixed _CurrentReloadingValue;
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-            half amount = tex2Dlod(_Splat, float4(IN.uv_Splat, 0, 0)).r;
-            // Albedo comes from a texture tinted by color
-            fixed4 c = lerp(tex2D (_MainTex, IN.uv_MainTex) * _Color, fixed4(0,0,0,1), amount);
+            half  amount = tex2Dlod(_Splat, float4(IN.uv_Splat, 0, 0)).r;
+            
+            fixed4 c = lerp(tex2D (_MainTex, IN.uv_MainTex) * lerp(_DestroyedColor, _Color, _CurrentReloadingValue), fixed4(0,0,0,1), amount);
             o.Albedo = c.rgb;
         }
         ENDCG

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TrailTexture : MonoBehaviour
 {
-    private RenderTexture rt;
     public Shader drawShader;
     private Material drawMaterial;
     public Transform[] rayCastPositions;
@@ -21,7 +20,12 @@ public class TrailTexture : MonoBehaviour
         drawMaterial = new Material(drawShader);
         foreach(Pavement pavement in pavements)
         {
-            pavement.GetComponent<MeshRenderer>().material.SetTexture("_Splat", rt = new RenderTexture(1024, 1024, 0, RenderTextureFormat.ARGBFloat));
+            if (!pavement.textureDefined)
+            {
+                pavement.mMeshRenderer.material.SetTexture("_Splat",
+                    pavement.rt = new RenderTexture(1024, 1024, 0, RenderTextureFormat.ARGBFloat));
+                pavement.textureDefined = true;
+            }
         }
     }
 
@@ -30,14 +34,16 @@ public class TrailTexture : MonoBehaviour
     {
         for (int i = 0; i < rayCastPositions.Length; i++)
         {
-            if (Physics.Raycast(rayCastPositions[i].position, -Vector3.up, out groundHit, 1f, layerMask))
+            if (Physics.Raycast(rayCastPositions[i].position, -Vector3.up, out groundHit, 10f, layerMask))
             {
+                Pavement currentPavement = groundHit.collider.GetComponent<Pavement>();
                 drawMaterial.SetVector("_Coordinate", new Vector4(groundHit.textureCoord.x, groundHit.textureCoord.y, 0, 0));
+                //drawMaterial.SetVector("_Coordinate", new Vector4(groundHit.point.x, groundHit.point.y, groundHit.point.z, 0));
                 drawMaterial.SetFloat("_Strength", brushStrength);
                 drawMaterial.SetFloat("_Size", brushSize);
-                RenderTexture temp = RenderTexture.GetTemporary(rt.width, rt.height, 0, RenderTextureFormat.ARGBFloat);
-                Graphics.Blit(rt, temp);
-                Graphics.Blit(temp, rt, drawMaterial);
+                RenderTexture temp = RenderTexture.GetTemporary(currentPavement.rt.width, currentPavement.rt.height, 0, RenderTextureFormat.ARGBFloat);
+                Graphics.Blit(currentPavement.rt, temp);
+                Graphics.Blit(temp, currentPavement.rt, drawMaterial);
                 RenderTexture.ReleaseTemporary(temp);
             }
         }
