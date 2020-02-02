@@ -13,10 +13,16 @@ public class UIButtonLogIn : UIButtonBase
 
     public override void OnButtonClicked()
     {
-        if (string.IsNullOrEmpty(tMPInputField.text)) return;
+        if (string.IsNullOrEmpty(tMPInputField.text))
+        {
+            Authentication.instance.AnonymousAuth("Guest");
+        }
+        else 
+        {
+            Authentication.instance.AnonymousAuth(tMPInputField.text);
+        }
 
         Debug.Log($"{tMPInputField.text}");
-        Authentication.instance.AnonymousAuth(tMPInputField.text);
         settingsTabManager.PanelAnim(0);
     }
 }
