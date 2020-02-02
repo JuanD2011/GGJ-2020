@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tricycle
+  m_Name: Tricycle 1
   m_Controller: {fileID: 9100000, guid: 0d967280a5ccaed46b7e9841ed9073f4, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: -1422011007694221501, guid: 35fbe5678baa21145924940ce6416999,
