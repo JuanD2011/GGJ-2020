@@ -22,6 +22,8 @@ MonoBehaviour:
       probability: 0.5
     - id: enemy_grandma
       probability: 0.5
+    - id: enemy_cat
+      probability: 0.1
     waves:
     - waveTime: 20
       waveDuration: 10
@@ -32,6 +34,8 @@ MonoBehaviour:
         probability: 0.5
       - id: enemy_grandma
         probability: 0.5
+      - id: enemy_cat
+        probability: 0.2
     - waveTime: 40
       waveDuration: 10
       waveEnemies:

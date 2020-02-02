@@ -492,50 +492,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
         type: 3}
-      propertyPath: spawnVolumes.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
-        type: 3}
-      propertyPath: enemyPrefabs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
-        type: 3}
-      propertyPath: spawnVolumes.Array.data[0]
-      value: 
-      objectReference: {fileID: 1653830617}
-    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
-        type: 3}
-      propertyPath: spawnVolumes.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
-        type: 3}
-      propertyPath: spawnVolumes.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
-        type: 3}
-      propertyPath: spawnVolumes.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
-        type: 3}
       propertyPath: spawnVolumesParent
       value: 
       objectReference: {fileID: 1153517291}
     - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
         type: 3}
-      propertyPath: enemyPrefabs.Array.data[1]
+      propertyPath: enemyPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 9158101850612664959, guid: 7880caa3ab456854c955fc5cd86fb054,
-        type: 3}
-    - target: {fileID: 8812657695219856854, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
-        type: 3}
-      propertyPath: enemyPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 812883291222540992, guid: cb3a3762cfcf26e42a59e7f226d56e02,
+      objectReference: {fileID: 4340637294095954584, guid: 4affdf6411cf67c479f0e55e6763264e,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e33b39fa8cb7fe549be0e9fb36588fc3, type: 3}
@@ -1727,12 +1691,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2588ac01ee4574948aa1af997b9557e4, type: 3}
---- !u!65 &1653830617 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4388843095789353024, guid: 2588ac01ee4574948aa1af997b9557e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1653830615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1892319265
 PrefabInstance:
   m_ObjectHideFlags: 0
