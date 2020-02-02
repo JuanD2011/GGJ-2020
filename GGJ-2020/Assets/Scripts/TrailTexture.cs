@@ -7,8 +7,6 @@ public class TrailTexture : MonoBehaviour
     private RenderTexture rt;
     public Shader drawShader;
     private Material drawMaterial;
-    private Material mMaterial;
-    public GameObject terrain;
     public Transform[] rayCastPositions;
     private RaycastHit groundHit;
     private int layerMask;
@@ -18,10 +16,13 @@ public class TrailTexture : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Pavement[] pavements = FindObjectsOfType<Pavement>();
         layerMask = LayerMask.GetMask("Pavement");
         drawMaterial = new Material(drawShader);
-        mMaterial = terrain.GetComponent<MeshRenderer>().material;
-        mMaterial.SetTexture("_Splat", rt = new RenderTexture(1024, 1024, 0, RenderTextureFormat.ARGBFloat));
+        foreach(Pavement pavement in pavements)
+        {
+            pavement.GetComponent<MeshRenderer>().material.SetTexture("_Splat", rt = new RenderTexture(1024, 1024, 0, RenderTextureFormat.ARGBFloat));
+        }
     }
 
     // Update is called once per frame
@@ -39,7 +40,6 @@ public class TrailTexture : MonoBehaviour
                 Graphics.Blit(temp, rt, drawMaterial);
                 RenderTexture.ReleaseTemporary(temp);
             }
-
         }
     }
 }
