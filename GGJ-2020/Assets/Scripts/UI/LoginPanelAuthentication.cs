@@ -16,18 +16,18 @@ public class LoginPanelAuthentication : MonoBehaviour
     {
         if (hasLoggedIn)
         {
+            settingsTabManager.Panels[5].gameObject.SetActive(false);
             settingsTabManager.PanelAnim(0);
         }
 
         Authentication.instance.OnLoggedIn += () =>
         {
-            Debug.Log("Loggeddd");
             hasLoggedIn = true;
+            settingsTabManager.Panels[5].gameObject.SetActive(false);
             settingsTabManager.PanelAnim(0);
         };
         Authentication.instance.OnSignedOut += () =>
         {
-            Debug.Log("eeee");
             settingsTabManager.Panels[5].gameObject.SetActive(true);
             settingsTabManager.PanelAnim(5);
         };

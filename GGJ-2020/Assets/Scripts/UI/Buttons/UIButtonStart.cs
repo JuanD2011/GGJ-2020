@@ -2,6 +2,6 @@
 {
     public override void OnButtonClicked()
     {
-        AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.cat, 1f, false);
+        AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.gunReload, 1f, false);
     }
 }

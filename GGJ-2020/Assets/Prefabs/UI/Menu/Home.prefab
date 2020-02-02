@@ -368,8 +368,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 885f0590d9f10c24eae10eee364e188d, type: 2}
-  m_sharedMaterial: {fileID: -5649650748772837479, guid: 885f0590d9f10c24eae10eee364e188d,
+  m_fontAsset: {fileID: 11400000, guid: 20e891d62c88e9a4f953f922eaad5b3a, type: 2}
+  m_sharedMaterial: {fileID: -2898419690648757762, guid: 20e891d62c88e9a4f953f922eaad5b3a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -538,8 +538,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 885f0590d9f10c24eae10eee364e188d, type: 2}
-  m_sharedMaterial: {fileID: -5649650748772837479, guid: 885f0590d9f10c24eae10eee364e188d,
+  m_fontAsset: {fileID: 11400000, guid: 20e891d62c88e9a4f953f922eaad5b3a, type: 2}
+  m_sharedMaterial: {fileID: -2898419690648757762, guid: 20e891d62c88e9a4f953f922eaad5b3a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -691,7 +691,7 @@ PrefabInstance:
     - target: {fileID: 1066751034, guid: 8d730b068cfb7c040b098104f66161df, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 13166637b98efc044afd35d2f2cb6124,
+      objectReference: {fileID: 21300000, guid: 691bc597d6e464e4f87157a9d5855ea2,
         type: 3}
     - target: {fileID: 1066751034, guid: 8d730b068cfb7c040b098104f66161df, type: 3}
       propertyPath: m_Type
@@ -764,22 +764,22 @@ PrefabInstance:
     - target: {fileID: 6742371463013265149, guid: 8d730b068cfb7c040b098104f66161df,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -42
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 6742371463013265149, guid: 8d730b068cfb7c040b098104f66161df,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -55
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 6742371463013265149, guid: 8d730b068cfb7c040b098104f66161df,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6742371463013265149, guid: 8d730b068cfb7c040b098104f66161df,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6742371463013265149, guid: 8d730b068cfb7c040b098104f66161df,
         type: 3}
