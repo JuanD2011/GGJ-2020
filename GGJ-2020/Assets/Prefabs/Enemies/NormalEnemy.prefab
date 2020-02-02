@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 2192883193874325758}
   - component: {fileID: -7202132062816976132}
   - component: {fileID: 2465498395690322944}
-  - component: {fileID: 3677384078599856903}
   m_Layer: 8
   m_Name: NormalEnemy
   m_TagString: Untagged
@@ -184,20 +183,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3677384078599856903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518682149905807890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88206fff6eceda44c8c008c695fc2c09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drawShader: {fileID: 4800000, guid: b54ee09b420e17941a4f0818b64cf90b, type: 3}
-  rayCastPositions:
-  - {fileID: 833135880064560740}
-  brushSize: 5
-  brushStrength: 0.5

@@ -56,3 +56,7 @@ MonoBehaviour:
     objectRef: {fileID: 6400172565988893032, guid: 633c2870a9e29454b92f530f9cb14635,
       type: 3}
     initialCount: 5
+  - tKey: RepairVFX
+    objectRef: {fileID: 4918645065383282283, guid: df32c21e08499634f8a370f726007cf8,
+      type: 3}
+    initialCount: 2

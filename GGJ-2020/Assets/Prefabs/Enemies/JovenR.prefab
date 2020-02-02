@@ -478,7 +478,6 @@ GameObject:
   - component: {fileID: 749377956218929291}
   - component: {fileID: 5700685805608610707}
   - component: {fileID: 5700685805608610710}
-  - component: {fileID: 5700685805608610709}
   - component: {fileID: 5700685805608610708}
   - component: {fileID: 5700685805608610711}
   - component: {fileID: -7858713767041770782}
@@ -517,8 +516,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.55, y: 3.1, z: 2.25}
-  m_Center: {x: 0, y: 1.8, z: 0}
+  m_Size: {x: 1.55, y: 4, z: 2.25}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &5700685805608610710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,22 +531,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnLimit: {fileID: 11400000, guid: f7414ac24ed4c2046bc69913709256c0, type: 2}
---- !u!114 &5700685805608610709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4340637294095954584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88206fff6eceda44c8c008c695fc2c09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drawShader: {fileID: 4800000, guid: b54ee09b420e17941a4f0818b64cf90b, type: 3}
-  rayCastPositions: []
-  brushSize: 5
-  brushStrength: 0.5
 --- !u!114 &5700685805608610708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,8 +544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: enemy_normal
-  speed: 1
-  damagePerSecond: 0.4
+  speed: 4
+  damagePerSecond: 1.2
   initialHealth: 1
 --- !u!114 &5700685805608610711
 MonoBehaviour:

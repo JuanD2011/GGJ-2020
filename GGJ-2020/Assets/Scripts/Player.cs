@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             if (Camera.main != null) ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out rayHit, 100)) 
+            if (Physics.Raycast(ray, out rayHit, 100, layerMask)) 
                 transform.LookAt(new Vector3(rayHit.point.x, transform.position.y, rayHit.point.z), transform.up);
             mWeapon.Shoot();
         }
@@ -53,13 +53,13 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             repairVFX.Play();
-            Physics.Raycast(ray, out previousFrameRayHit, 100);
+            Physics.Raycast(ray, out previousFrameRayHit, 100, layerMask);
             repairVFX.transform.position = previousFrameRayHit.point;
         }
         else if (Input.GetMouseButton(0))
         {
             if (Camera.main != null) ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out rayHit, 100))
+            if (Physics.Raycast(ray, out rayHit, 100, layerMask))
             {
                 AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.revokingWall, 1f, true);
                 Pavement currentPavement = rayHit.collider.gameObject.GetComponent<Pavement>();

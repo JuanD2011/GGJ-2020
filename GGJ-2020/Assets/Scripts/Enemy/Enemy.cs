@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(EnemyMovement))]
-[RequireComponent(typeof(TrailTexture))]
 public class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField] private string id = "";
@@ -85,9 +84,11 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Spoil");
         spoilableUnit = other.GetComponent<ISpoilable>();
         if (spoilableUnit != null && stayOnTrigger == false)
         {
+            print("Spoil");
             stayOnTrigger = true;
             spoilableUnit.Spoil(damagePerSecond);
         }
