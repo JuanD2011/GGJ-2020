@@ -14,7 +14,7 @@ public class LevelSelectionmanager : MonoBehaviour
 
         levelSelections[0].Initialize(1);
 
-        for (int i = 0; i < currentLevel; i++)
+        for (int i = 1; i < currentLevel; i++)
         {
             levelSelections[i].Initialize(i + 1);
         }
