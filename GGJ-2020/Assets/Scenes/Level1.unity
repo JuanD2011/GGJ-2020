@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHealthPoints: 100
-  levelData: {fileID: 0}
+  levelData: {fileID: 11400000, guid: ab4edfb23f7b9024bb047946067f6966, type: 2}
 --- !u!1001 &1304553794
 PrefabInstance:
   m_ObjectHideFlags: 0
