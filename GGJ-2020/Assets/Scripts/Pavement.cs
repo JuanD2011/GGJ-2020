@@ -20,6 +20,7 @@ public class Pavement : MonoBehaviour, ISpoilable
     private void Start()
     {
         healthPoints = initialHealthPoints;
+        levelData.pavementStatus = healthPoints / 100f;
     }
 
     public void Spoil(float _spoilAmount)
