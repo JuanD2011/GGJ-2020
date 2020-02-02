@@ -1573,6 +1573,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4538915359971998951, guid: 9c7e913d5754934408586fe12fde9d1b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4547915315309554925, guid: 9c7e913d5754934408586fe12fde9d1b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1618,6 +1623,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179899599958166931, guid: 9c7e913d5754934408586fe12fde9d1b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179899599958166931, guid: 9c7e913d5754934408586fe12fde9d1b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179899599958166931, guid: 9c7e913d5754934408586fe12fde9d1b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7269590294305539643, guid: 9c7e913d5754934408586fe12fde9d1b,
         type: 3}
@@ -1696,6 +1716,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c7e913d5754934408586fe12fde9d1b, type: 3}
+--- !u!1 &4295490756593593757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7785926527745583247, guid: 9c7e913d5754934408586fe12fde9d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4295490756593593756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4295490756593593758
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4295490756593593757}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9f5d121dda66f243bec8ef055c2ec38, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5035693468536700846
 PrefabInstance:
   m_ObjectHideFlags: 0
