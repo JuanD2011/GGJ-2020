@@ -24,7 +24,7 @@ public class Pavement : MonoBehaviour, ISpoilable
     private void Start()
     {
         healthPoints = initialHealthPoints;
-        levelData.pavementStatus = healthPoints / 100f;
+        levelData.pavementStatus = healthPoints / initialHealthPoints;
     }
 
     public void Spoil(float _spoilAmount)
@@ -33,7 +33,7 @@ public class Pavement : MonoBehaviour, ISpoilable
         mRenderer.GetPropertyBlock(mProperties);
         mProperties.SetFloat("_CurrentReloadingValue", 1 - (healthPoints / initialHealthPoints));
         mRenderer.SetPropertyBlock(mProperties);
-        levelData.pavementStatus = healthPoints / 100f;
+        levelData.pavementStatus = healthPoints / initialHealthPoints;
         OnPavementDamaged?.Invoke(_spoilAmount);
     }
 
@@ -45,6 +45,7 @@ public class Pavement : MonoBehaviour, ISpoilable
         mRenderer.SetPropertyBlock(mProperties);
         if(healthPoints / initialHealthPoints == 1)
         {
+            AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.perfectCement, 1f, false);
             RenderTexture temp = (RenderTexture)mMeshRenderer.material.GetTexture("_Splat");
             temp.Release();
             Graphics.Blit(temp, rt);

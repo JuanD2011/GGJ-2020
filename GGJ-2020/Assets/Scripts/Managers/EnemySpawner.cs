@@ -62,6 +62,24 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemy.gameObject, spawnVolume.GetRandomPointInVolume(), Quaternion.identity);
             }
         }
+
+        switch (enemy.Id)
+        {
+            case "enemy_cat":
+                AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.cat, 1f, false);
+                break;
+            case "enemy_grandma":
+                AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.oldWoman, 1f, false);
+                break;
+            case "enemy_trycicle":
+                AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.trycicle, 1f, false);
+                break;
+            case "enemy_normal":
+                //AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.trycicle, 1f, false);
+                break;
+            default:
+                break;
+        }
     }
 
     public void OnWaveStart()
