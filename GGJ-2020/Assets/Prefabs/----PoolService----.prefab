@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5755821218402511165}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10.3}
   m_LocalScale: {x: 6, y: 10, z: 6}
   m_Children: []
@@ -52,3 +52,7 @@ MonoBehaviour:
     objectRef: {fileID: 4650953064277773177, guid: eaac6940120230d4baa72a1de1181857,
       type: 3}
     initialCount: 10
+  - tKey: DeathVFX
+    objectRef: {fileID: 6400172565988893032, guid: 633c2870a9e29454b92f530f9cb14635,
+      type: 3}
+    initialCount: 5

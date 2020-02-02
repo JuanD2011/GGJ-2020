@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8812657695219856855}
   - component: {fileID: 8812657695219856848}
   - component: {fileID: 8812657695219856849}
+  - component: {fileID: 147960027}
+  - component: {fileID: 147960028}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -120,3 +122,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &147960027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812657695219856850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e36a3e26bff1ee4c80885ec9ce904c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelData: {fileID: 11400000, guid: ab4edfb23f7b9024bb047946067f6966, type: 2}
+  pavementModulePrefab: {fileID: 5518722696383758231, guid: 60f88fd5ab979b940bc7be709881b6be,
+    type: 3}
+  pavementParent: {fileID: 0}
+--- !u!114 &147960028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812657695219856850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e23e81e7dbe17b4dbf7d355f7578fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

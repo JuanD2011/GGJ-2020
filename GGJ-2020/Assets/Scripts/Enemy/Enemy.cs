@@ -69,6 +69,15 @@ public class Enemy : MonoBehaviour, IDamageable
     protected void OnDead()
     {
         gameObject.SetActive(false);
+        ShootVFX();
+    }
+
+    private void ShootVFX()
+    {
+        OneShotParticles ps = PoolService.Instance.GetGameObjectFromPool("DeathVFX").GetComponent<OneShotParticles>();
+        ps.transform.position = transform.position;
+        ps.transform.rotation = transform.rotation;
+        ps.StartParticles();
     }
 
     private void OnTriggerEnter(Collider other)
