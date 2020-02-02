@@ -25,7 +25,7 @@ public class Pavement : MonoBehaviour, ISpoilable
         healthPoints = Mathf.Clamp(healthPoints - _spoilAmount, 0, initialHealthPoints);
         print(healthPoints / initialHealthPoints);
         mRenderer.GetPropertyBlock(mProperties);
-        mProperties.SetFloat("_CurrentReloadingValue", healthPoints / initialHealthPoints);
+        mProperties.SetFloat("_CurrentReloadingValue", 1 - (healthPoints / initialHealthPoints));
         mRenderer.SetPropertyBlock(mProperties);
 
     }
@@ -34,7 +34,7 @@ public class Pavement : MonoBehaviour, ISpoilable
     {
         healthPoints = Mathf.Clamp(healthPoints + _amount, 0, initialHealthPoints);
         mRenderer.GetPropertyBlock(mProperties);
-        mProperties.SetFloat("_CurrentReloadingValue", healthPoints / initialHealthPoints);
+        mProperties.SetFloat("_CurrentReloadingValue", 1 - (healthPoints / initialHealthPoints));
         mRenderer.SetPropertyBlock(mProperties);
     }
 }
