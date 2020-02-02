@@ -25,7 +25,8 @@ public class Bullet : MonoBehaviour
         if (damageableUnit != null)
         {
             damageableUnit.Damage(damage);
-            gameObject.SetActive(false);
+            mBody.velocity = Vector3.zero;
+            PoolService.Instance.ReturnGameObjectToPools(this.gameObject, "Bullet");
             StopAllCoroutines();
         }
     }
@@ -37,6 +38,7 @@ public class Bullet : MonoBehaviour
     private IEnumerator DissolveWithTime()
     {
         yield return new WaitForSeconds(4);
-        gameObject.SetActive(false);
+        mBody.velocity = Vector3.zero;
+        PoolService.Instance.ReturnGameObjectToPools(this.gameObject, "Bullet");
     }
 }
