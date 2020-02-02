@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
             if (Camera.main != null) ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out rayHit, 100))
             {
+                AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.revokingWall, 1f, true);
                 Pavement currentPavement = rayHit.collider.gameObject.GetComponent<Pavement>();
                 float distance = Vector3.Distance(rayHit.point, previousFrameRayHit.point);
                 currentPavement?.PatchUp(distance);
@@ -70,6 +71,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
+            AudioManager.Instance.StopByClip(AudioManager.Instance.audioClips.revokingWall);
             repairVFX.Stop();
         }
     }

@@ -70,6 +70,7 @@ public class Weapon : MonoBehaviour
             Random.Range(gunMuzzlePos.eulerAngles.y - shotDispersionAngle, gunMuzzlePos.eulerAngles.y + shotDispersionAngle),
             gunMuzzlePos.eulerAngles.z));
         newBullet.Impulse(shootingForce);
+        AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.gunShot, 1f, false);
     }
 
     private void ShootVFX()
@@ -96,6 +97,7 @@ public class Weapon : MonoBehaviour
             yield return null;
         }
         ammo = ammoCap;
+        AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.gunReload, 1f, false);
     }
 
     /// <summary>
