@@ -18,18 +18,34 @@ MonoBehaviour:
     idleEnemies:
     - id: enemy_normal
       probability: 0.4
+    - id: enemy_cat
+      probability: 0
+    - id: enemy_grandma
+      probability: 0
+    - id: enemy_tricycle
+      probability: 0
     waves:
     - waveTime: 40
       waveDuration: 10
       waveEnemies:
       - id: enemy_normal
         probability: 0.5
+      - id: enemy_cat
+        probability: 0
+      - id: enemy_grandma
+        probability: 0
+      - id: enemy_tricycle
+        probability: 0
   - duration: 60
     pavementModulesNumber: 3
     idleEnemies:
     - id: enemy_normal
       probability: 0.5
     - id: enemy_cat
+      probability: 0.15
+    - id: enemy_grandma
+      probability: 0.15
+    - id: enemy_tricycle
       probability: 0.15
     waves:
     - waveTime: 20
@@ -39,6 +55,10 @@ MonoBehaviour:
         probability: 0.5
       - id: enemy_cat
         probability: 0.3
+      - id: enemy_grandma
+        probability: 0
+      - id: enemy_tricycle
+        probability: 0
     - waveTime: 50
       waveDuration: 10
       waveEnemies:
@@ -46,6 +66,10 @@ MonoBehaviour:
         probability: 0.75
       - id: enemy_cat
         probability: 0.4
+      - id: enemy_grandma
+        probability: 0
+      - id: enemy_tricycle
+        probability: 0
   - duration: 90
     pavementModulesNumber: 3
     idleEnemies:
@@ -55,6 +79,8 @@ MonoBehaviour:
       probability: 0.2
     - id: enemy_grandma
       probability: 0.15
+    - id: enemy_tricycle
+      probability: 0
     waves:
     - waveTime: 20
       waveDuration: 10
@@ -65,6 +91,8 @@ MonoBehaviour:
         probability: 0.2
       - id: enemy_grandma
         probability: 0.3
+      - id: enemy_tricycle
+        probability: 0
     - waveTime: 60
       waveDuration: 10
       waveEnemies:
@@ -74,6 +102,8 @@ MonoBehaviour:
         probability: 0.4
       - id: enemy_grandma
         probability: 0.3
+      - id: enemy_tricycle
+        probability: 0
   - duration: 90
     pavementModulesNumber: 4
     idleEnemies:
