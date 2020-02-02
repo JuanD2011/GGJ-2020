@@ -17,12 +17,14 @@ public class EnemySpawner : MonoBehaviour
     private bool idle = true;
     private byte waveNumber = 0;
 
-    [SerializeField] private Collider[] spawnVolumes;
+    [SerializeField] private GameObject spawnVolumesParent;
+    private Collider[] spawnVolumes;
 
     public CurrentLevelData LevelData { get => levelData; private set => levelData = value; }
 
     private void Awake()
     {
+        spawnVolumes = spawnVolumesParent.GetComponentsInChildren<Collider>();
         enemyIdle = LevelData.levelData.idleEnemies.ToDictionary(x => x.id, x => x.probability);
         enemyWave = LevelData.levelData.waves[waveNumber].waveEnemies.ToDictionary(x => x.id, x => x.probability);
     }
@@ -39,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Collider spawnVolume = spawnVolumes[Random.Range(0, spawnVolumes.Length)];
+        Collider spawnVolume = spawnVolumes[Random.Range(1, spawnVolumes.Length)];
         Enemy enemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)].GetComponent<Enemy>();
         if (idle)
         {

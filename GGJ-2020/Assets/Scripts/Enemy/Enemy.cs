@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour, IDamageable
             if (timer >= 1f)
             {
                 timer = 0f;
-                spoilableUnit.Spoil(damagePerSecond);
+                spoilableUnit?.Spoil(damagePerSecond);
             }
         }
         else timer = 0f;

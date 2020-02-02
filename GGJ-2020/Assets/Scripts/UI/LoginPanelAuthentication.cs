@@ -5,6 +5,8 @@ public class LoginPanelAuthentication : MonoBehaviour
 {
     private SettingsTabManager settingsTabManager = null;
 
+    private static bool hasLoggedIn = false;
+
     private void Awake()
     {
         settingsTabManager = GetComponent<SettingsTabManager>();
@@ -12,7 +14,22 @@ public class LoginPanelAuthentication : MonoBehaviour
 
     private void Start()
     {
-        Authentication.instance.OnLoggedIn += () => settingsTabManager.PanelAnim(0);
-        Authentication.instance.OnSignedOut += () => settingsTabManager.PanelAnim(5);
+        if (hasLoggedIn)
+        {
+            settingsTabManager.PanelAnim(0);
+        }
+
+        Authentication.instance.OnLoggedIn += () =>
+        {
+            Debug.Log("Loggeddd");
+            hasLoggedIn = true;
+            settingsTabManager.PanelAnim(0);
+        };
+        Authentication.instance.OnSignedOut += () =>
+        {
+            Debug.Log("eeee");
+            settingsTabManager.Panels[5].gameObject.SetActive(true);
+            settingsTabManager.PanelAnim(5);
+        };
     }
 }

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Leaderboard : MonoBehaviour
 {
-    public async void ShowLeaderboard()
+    public static async void GetLeaderboard()
     {
-        List<Dictionary<string, string>> friendsDataList = await Database.DB.GetUserList();
-  
+        List<Dictionary<string, string>> friendsDataList = await Database.DB.GetUserList(); 
         int friendsCount = friendsDataList.Count;
 
         for (int i = 0; i < friendsCount - 1; i++)
@@ -23,6 +22,6 @@ public class Leaderboard : MonoBehaviour
                 }
             }
         }
-
+        UILeaderboard.OnShowLeaderboard.Invoke(friendsDataList);
     }
 }
