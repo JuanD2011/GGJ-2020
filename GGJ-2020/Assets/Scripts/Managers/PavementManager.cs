@@ -26,7 +26,7 @@ public class PavementManager : MonoBehaviour
         }
         else if (pavements.Count % 2 == 0)
         {
-            displacementCounter = 2.5f;
+            displacementCounter = 2f;
             int counter = 0;
             foreach (Pavement pavement in pavements)
             {
@@ -36,14 +36,14 @@ public class PavementManager : MonoBehaviour
                 if (counter == 2)
                 {
                     counter = 0;
-                    displacementCounter += 2.5f;
+                    displacementCounter += 2f;
                 }
             }
         }
         else
         {
             pavements[0].transform.position = new Vector3(0f, pavements[0].transform.position.y, pavements[0].transform.position.z);
-            displacementCounter = 5f;
+            displacementCounter = 4f;
             int counter = 0;
             for (int i = 1; i < pavements.Count; i++)
             {
@@ -53,7 +53,7 @@ public class PavementManager : MonoBehaviour
                 if (counter == 2)
                 {
                     counter = 0;
-                    displacementCounter += 5f;
+                    displacementCounter += 4f;
                 }
             }
         }
