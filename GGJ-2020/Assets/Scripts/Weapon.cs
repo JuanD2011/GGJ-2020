@@ -42,12 +42,13 @@ public class Weapon : MonoBehaviour
             {
                 if (!useMultipleShots) ShootRound();
                 else
-                {
                     for (int i = 0; i < useMultipleCount; i++)
-                    {
                         ShootRound();
-                    }
-                }
+                OneShotParticles ps = PoolService.Instance.GetGameObjectFromPool("BulletVFX")
+                    .GetComponent<OneShotParticles>();
+                ps.transform.position = gunMuzzlePos.position;
+                ps.transform.rotation = gunMuzzlePos.rotation;
+                ps.StartParticles();
                 ammo -= 1;
                 StartCoroutine(Refresh());
                 if (ammo == 0) StartCoroutine(Reload());

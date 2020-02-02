@@ -131,6 +131,10 @@ MonoBehaviour:
     objectRef: {fileID: 868871563148486463, guid: 92d010a4779c79544a1d1e9881c8085f,
       type: 3}
     initialCount: 10
+  - tKey: BulletVFX
+    objectRef: {fileID: 4650953064277773177, guid: eaac6940120230d4baa72a1de1181857,
+      type: 3}
+    initialCount: 10
 --- !u!1 &1645240501473064578
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,12 +406,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e0dcb03367f15479981644acd4fb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refreshTime: 0.3
-  reloadTime: 2
-  ammoCap: 4
   gunMuzzlePos: {fileID: 3445066716728538991}
   mBullet: {fileID: 5123732241843027998, guid: 92d010a4779c79544a1d1e9881c8085f, type: 3}
+  refreshTime: 0.3
+  reloadTime: 2
   shootingForce: 20
+  ammoCap: 4
+  useMultipleShots: 0
+  useMultipleCount: 3
+  shotDispersionAngle: 5
 --- !u!1 &3445066716950967179
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +908,6 @@ GameObject:
   - component: {fileID: 3445066718064522488}
   - component: {fileID: 3445066718064522491}
   - component: {fileID: 3445066718064522490}
-  - component: {fileID: 1242227516}
   m_Layer: 0
   m_Name: Pavement
   m_TagString: Untagged
@@ -983,20 +989,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1242227516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3445066718064522493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abd1e4ee3914385408f8bc35c23c9660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialHealthPoints: 100
-  levelData: {fileID: 0}
 --- !u!1 &3445066718242459715
 GameObject:
   m_ObjectHideFlags: 0
