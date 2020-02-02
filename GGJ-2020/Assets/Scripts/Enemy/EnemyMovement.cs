@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         direction = CheckLimits.LeftOrRight(transform.position) ? -1 : 1;
+        speed = EnemyController.CalculateVelocity(speed, 1);
     }
 
     public void Movement()
