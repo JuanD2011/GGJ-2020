@@ -64,9 +64,9 @@ public class Weapon : MonoBehaviour
     {
         Bullet newBullet = PoolService.Instance.GetGameObjectFromPool("Bullet").GetComponent<Bullet>();
         newBullet.transform.position = gunMuzzlePos.position;
-        newBullet.transform.rotation = Quaternion.Euler(new Vector3(transform.eulerAngles.x, 
-            Random.Range(transform.eulerAngles.y - shotDispersionAngle, transform.eulerAngles.y + shotDispersionAngle), 
-            transform.eulerAngles.z));
+        newBullet.transform.rotation = Quaternion.Euler(new Vector3(gunMuzzlePos.eulerAngles.x, 
+            Random.Range(gunMuzzlePos.eulerAngles.y - shotDispersionAngle, gunMuzzlePos.eulerAngles.y + shotDispersionAngle),
+            gunMuzzlePos.eulerAngles.z));
         newBullet.Impulse(shootingForce);
     }
 
