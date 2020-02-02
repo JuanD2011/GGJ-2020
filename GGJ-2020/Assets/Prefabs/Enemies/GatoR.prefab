@@ -565,11 +565,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8389144876020582616}
   - component: {fileID: 1938299433169610146}
-  - component: {fileID: 8296172669484830012}
   - component: {fileID: 8296172669484830011}
   - component: {fileID: 8296172669484830010}
   - component: {fileID: 8296172669484830013}
   - component: {fileID: 6178515140463111330}
+  - component: {fileID: -5012637845968891067}
   m_Layer: 0
   m_Name: GatoR
   m_TagString: Untagged
@@ -612,19 +612,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8296172669484830012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4771391224284723915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28409ed8c9adaec48a85651b8cbdf329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnLimit: {fileID: 11400000, guid: f7414ac24ed4c2046bc69913709256c0, type: 2}
 --- !u!114 &8296172669484830011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,6 +684,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.65, z: 0}
+--- !u!114 &-5012637845968891067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771391224284723915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d20f6d955a0c148b01f5a01e147576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnLimit: {fileID: 11400000, guid: f7414ac24ed4c2046bc69913709256c0, type: 2}
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.9920414
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5039673
+      value: 1.003891
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99109983
+      value: -1.0031767
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 1
+    m_RotationOrder: 4
 --- !u!1 &4941322155874879635
 GameObject:
   m_ObjectHideFlags: 0
