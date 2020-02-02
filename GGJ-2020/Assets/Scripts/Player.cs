@@ -13,6 +13,7 @@ public enum PlayerState
 /// </summary>
 public class Player : MonoBehaviour
 {
+    private ParticleSystem repairVFX;
     private Weapon mWeapon = null;
     private Ray ray = new Ray();
     private RaycastHit rayHit = new RaycastHit();
@@ -51,7 +52,9 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            repairVFX.Play();
             Physics.Raycast(ray, out previousFrameRayHit, 100);
+            repairVFX.transform.position = previousFrameRayHit.point;
         }
         else if (Input.GetMouseButton(0))
         {
@@ -61,10 +64,32 @@ public class Player : MonoBehaviour
                 Pavement currentPavement = rayHit.collider.gameObject.GetComponent<Pavement>();
                 float distance = Vector3.Distance(rayHit.point, previousFrameRayHit.point);
                 currentPavement?.PatchUp(distance);
+                repairVFX.transform.position = rayHit.point;
                 previousFrameRayHit = rayHit;
             }
         }
+        if (Input.GetMouseButtonUp(0))
+        {
+            repairVFX.Stop();
+        }
     }
 
-    public void ChangeState(PlayerState _desiredPlayerState) => mCurrentState = _desiredPlayerState;
+    public void ChangeState(PlayerState _desiredPlayerState)
+    {
+        mCurrentState = _desiredPlayerState; 
+        if(_desiredPlayerState == PlayerState.Repairing)
+        {
+            if(repairVFX == null)
+                repairVFX = PoolService.Instance.GetGameObjectFromPool("RepairVFX").GetComponent<ParticleSystem>();
+        }
+        else
+        {
+            if (repairVFX != null)
+            {
+                repairVFX.Stop();
+                PoolService.Instance.ReturnGameObjectToPools(repairVFX.gameObject, "RepairVFX");
+                repairVFX = null;
+            }
+        }
+    }
 }
