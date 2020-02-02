@@ -15,6 +15,8 @@ public class SettingsTabManager : MonoBehaviour
     private readonly string panelModalIn = "MP Modal In";
     private readonly string panelModalOut = "MP Modal Out";
 
+    public GameObject[] Panels { get => panels; private set => panels = value; }
+
     private void Awake()
     {
         InitializePanelAnimators();
@@ -38,11 +40,11 @@ public class SettingsTabManager : MonoBehaviour
 
     private void InitializePanelAnimators()
     {
-        panelAnimators = new Animator[panels.Length];
+        panelAnimators = new Animator[Panels.Length];
 
         for (int i = 0; i < panelAnimators.Length; i++)
         {
-            panelAnimators[i] = panels[i].GetComponent<Animator>();
+            panelAnimators[i] = Panels[i].GetComponent<Animator>();
         }
     }
 

@@ -4,11 +4,18 @@
 public class AudioClips : ScriptableObject
 {
     [Header("Music")]
-    public AudioClip inGameMusic = null;
+    public AudioClip music = null;
 
     [Header("UI")]
     public AudioClip defaultButton = null;
-    public AudioClip acceptButton = null;
-    public AudioClip cancelButton = null;
-    public AudioClip notificationAlert = null;
+
+    [Header("Game")]
+    public AudioClip winner = null;
+    public AudioClip gameOver = null;
+
+    public AudioClip cat = null;
+    public AudioClip oldWoman = null;
+
+    public AudioClip reload = null;
+    public AudioClip shoot = null;
 }
