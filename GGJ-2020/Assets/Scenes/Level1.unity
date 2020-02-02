@@ -395,7 +395,12 @@ PrefabInstance:
         type: 3}
       propertyPath: pavement
       value: 
-      objectReference: {fileID: 1203295125}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393494255055297341, guid: ab42c1f4c768aa2419d0765d77b2848e,
+        type: 3}
+      propertyPath: pavementsParent
+      value: 
+      objectReference: {fileID: 982378741}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab42c1f4c768aa2419d0765d77b2848e, type: 3}
 --- !u!1 &467038067
@@ -529,6 +534,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driveToPlayerState: 0
+--- !u!1 &549109727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8812657695219856850, guid: e33b39fa8cb7fe549be0e9fb36588fc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 147960025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &549109728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549109727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e36a3e26bff1ee4c80885ec9ce904c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelData: {fileID: 11400000, guid: ab4edfb23f7b9024bb047946067f6966, type: 2}
+  pavementModulePrefab: {fileID: 2204721681605738988, guid: 60f88fd5ab979b940bc7be709881b6be,
+    type: 3}
+  pavementParent: {fileID: 982378742}
 --- !u!1 &687327395
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +785,7 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 180630741}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1203295120
+--- !u!1 &982378741
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -766,106 +793,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1203295124}
-  - component: {fileID: 1203295123}
-  - component: {fileID: 1203295122}
-  - component: {fileID: 1203295121}
-  - component: {fileID: 1203295125}
+  - component: {fileID: 982378742}
   m_Layer: 0
-  m_Name: Pavement
+  m_Name: PavementParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1203295121
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203295120}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1203295122
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203295120}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 43c024230204ed747b27c6cccd2a0150, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1203295123
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203295120}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1203295124
+--- !u!4 &982378742
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203295120}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 982378741}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.22, z: 3.12}
-  m_LocalScale: {x: 18.576, y: 1, z: 3.3266}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1203295125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203295120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abd1e4ee3914385408f8bc35c23c9660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialHealthPoints: 100
-  levelData: {fileID: 11400000, guid: ab4edfb23f7b9024bb047946067f6966, type: 2}
 --- !u!1001 &1304553794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1067,7 +1016,7 @@ PrefabInstance:
     - target: {fileID: 7785582100061708036, guid: 518c82ef1034f1f4faf42dbba4b49659,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7785582100061708036, guid: 518c82ef1034f1f4faf42dbba4b49659,
         type: 3}
@@ -1580,7 +1529,7 @@ PrefabInstance:
     - target: {fileID: 3480460115830846924, guid: 8bdc07f6cebb95741ad926481c0a917a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3480460115830846924, guid: 8bdc07f6cebb95741ad926481c0a917a,
         type: 3}
