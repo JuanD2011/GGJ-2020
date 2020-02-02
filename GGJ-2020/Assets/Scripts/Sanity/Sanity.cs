@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Sanity : MonoBehaviour
@@ -24,11 +25,24 @@ public class Sanity : MonoBehaviour
 
     private void OnPavementDamaged(float _damage)
     {
-        insanityPercentage += levelData.pavementStatus * _damage;
-        LeanTween.value(fill.fillAmount, insanityPercentage, 1f);
+        insanityPercentage += (1f - levelData.pavementStatus) * _damage;
+        StartCoroutine(UpdateFill());
+        
         if (insanityPercentage >= 1)
         {
+            Debug.Log("GAME OVER");
             OnGameOver.Raise();
+        }
+    }
+
+    private IEnumerator UpdateFill()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            fill.fillAmount = Mathf.Lerp(fill.fillAmount, insanityPercentage, elapsedTime / 1f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 }

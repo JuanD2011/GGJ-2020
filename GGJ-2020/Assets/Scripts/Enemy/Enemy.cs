@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour, IDamageable
         gameObject.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         spoilableUnit = other.GetComponent<ISpoilable>();
         if (spoilableUnit != null && stayOnTrigger == false)
