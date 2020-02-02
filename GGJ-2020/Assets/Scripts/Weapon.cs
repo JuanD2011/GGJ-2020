@@ -36,25 +36,28 @@ public class Weapon : MonoBehaviour
     /// </summary>
     public void Shoot()
     {
-        try
+        if (!PauseManager.paused)
         {
-            if (ammo > 0 && canShoot)
+            try
             {
-                if (!useMultipleShots) ShootRound();
-                else
+                if (ammo > 0 && canShoot)
                 {
-                    for (int i = 0; i < useMultipleCount; i++)
+                    if (!useMultipleShots) ShootRound();
+                    else
                     {
-                        ShootRound();
+                        for (int i = 0; i < useMultipleCount; i++)
+                        {
+                            ShootRound();
+                        }
                     }
+                    ammo -= 1;
+                    StartCoroutine(Refresh());
+                    if (ammo == 0) StartCoroutine(Reload());
                 }
-                ammo -= 1;
-                StartCoroutine(Refresh());
-                if (ammo == 0) StartCoroutine(Reload());
-            }
 
+            }
+            catch { Debug.LogError("Bullet in weapon is not instantiated!"); } 
         }
-        catch { Debug.LogError("Bullet in weapon is not instantiated!"); }
     }
 
     private void ShootRound()
