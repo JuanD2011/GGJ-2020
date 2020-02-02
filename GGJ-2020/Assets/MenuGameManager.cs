@@ -10,6 +10,7 @@ public class MenuGameManager : MonoBehaviour
     public void OnVictory()
     {
         AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.winner, 1f, false);
+        Database.DB.SetCurrentLevel(LevelInfo.number + 1);
     }
 
     public void OnDefeat()
