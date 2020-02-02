@@ -9,6 +9,8 @@ public class Pavement : MonoBehaviour, ISpoilable
 
     [SerializeField] private CurrentLevelData levelData = null;
 
+    public event Delegates.Action<float> OnPavementDamaged = null;
+
     private void Awake()
     {
         mRenderer = GetComponent<Renderer>();
@@ -27,7 +29,8 @@ public class Pavement : MonoBehaviour, ISpoilable
         mRenderer.GetPropertyBlock(mProperties);
         mProperties.SetFloat("_CurrentReloadingValue", healthPoints / initialHealthPoints);
         mRenderer.SetPropertyBlock(mProperties);
-
+        levelData.pavementStatus = healthPoints / 100f;
+        OnPavementDamaged?.Invoke(_spoilAmount);
     }
 
     public void PatchUp(float _amount)
