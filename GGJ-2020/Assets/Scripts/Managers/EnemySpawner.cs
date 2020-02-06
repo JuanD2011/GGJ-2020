@@ -46,9 +46,16 @@ public class EnemySpawner : MonoBehaviour
     {
         Collider spawnVolume = spawnVolumes[Random.Range(1, spawnVolumes.Length)];
         Enemy enemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)].GetComponent<Enemy>();
+
         if (idle)
         {
             float probability = enemyIdle[enemy.Id];
+            while (probability == 0f)
+            {
+                enemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)].GetComponent<Enemy>();
+                probability = enemyIdle[enemy.Id];
+            }  
+                
             if (Random.Range(0f, 1f) <= probability)
             {
                 Instantiate(enemy.gameObject, spawnVolume.GetRandomPointInVolume(), Quaternion.identity);
@@ -60,7 +67,7 @@ public class EnemySpawner : MonoBehaviour
                     case "enemy_grandma":
                         AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.oldWoman, 1f, false);
                         break;
-                    case "enemy_trycicle":
+                    case "enemy_tricycle":
                         AudioManager.Instance.PlaySFx(AudioManager.Instance.audioClips.trycicle, 1f, false);
                         break;
                     case "enemy_normal":

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8812657695219856849}
   - component: {fileID: 147960027}
   - component: {fileID: 147960028}
+  - component: {fileID: 147960029}
+  - component: {fileID: 7963951760619443965}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -50,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelData: {fileID: 11400000, guid: ab4edfb23f7b9024bb047946067f6966, type: 2}
   enemyPrefabs:
-  - {fileID: 7518682149905807890, guid: 368d784b681b44549b139ea8b3e96516, type: 3}
+  - {fileID: 4340637294095954584, guid: 4affdf6411cf67c479f0e55e6763264e, type: 3}
   - {fileID: 9158101850612664959, guid: 7880caa3ab456854c955fc5cd86fb054, type: 3}
   - {fileID: 4771391224284723915, guid: 303b9a0de5cf9d54eafb68d22b1c2a6b, type: 3}
   - {fileID: 812883291222540992, guid: cb3a3762cfcf26e42a59e7f226d56e02, type: 3}
@@ -153,3 +155,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e23e81e7dbe17b4dbf7d355f7578fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &147960029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812657695219856850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24185a0532145c4b963dfe49eeb8914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d2aed0e34618ef647a7d264b749bf59e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 147960028}
+        m_MethodName: SwitchPause
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &7963951760619443965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812657695219856850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24185a0532145c4b963dfe49eeb8914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 279c25c9bbad5c0488a1c070f9e656ee, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 147960028}
+        m_MethodName: SwitchPause
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2

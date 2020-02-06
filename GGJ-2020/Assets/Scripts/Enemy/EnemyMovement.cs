@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -11,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        direction = CheckLimits.LeftOrRight(transform.position) ? -1 : 1;
+        direction = transform.position.x > 0 ? -1 : 1;
         if (direction == 1) transform.eulerAngles = new Vector3(0, 90, 0);
         else transform.eulerAngles = new Vector3(0, -90, 0);
         speed = EnemyController.CalculateVelocity(speed, 1);

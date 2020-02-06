@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum PlayerState
 {
@@ -45,6 +43,7 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(ray, out rayHit, 100, layerMask)) 
                 transform.LookAt(new Vector3(rayHit.point.x, transform.position.y, rayHit.point.z), transform.up);
             mWeapon.Shoot();
+            
         }
     }
 

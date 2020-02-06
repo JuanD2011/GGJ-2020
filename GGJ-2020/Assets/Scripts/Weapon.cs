@@ -20,10 +20,13 @@ public class Weapon : MonoBehaviour
     private Renderer mRenderer = null;
     private MaterialPropertyBlock mProperties;
 
+    private Animator animator = null;
+
     private void Awake()
     {
         mRenderer = GetComponent<Renderer>();
         mProperties = new MaterialPropertyBlock();
+        animator = GetComponentInParent<Animator>();
     }
 
     private void Start()
@@ -50,6 +53,7 @@ public class Weapon : MonoBehaviour
                             ShootRound();
                         }
                     }
+                    /*if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|Shooting"))*/ animator.SetTrigger("Shoot");
                     ammo -= 1;
                     StartCoroutine(Refresh());
                     ShootVFX();

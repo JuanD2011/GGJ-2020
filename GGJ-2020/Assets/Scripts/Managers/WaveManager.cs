@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveManager : MonoBehaviour
 {
-    [SerializeField] private CurrentLevelData levelData;
+    [SerializeField] private CurrentLevelData levelData = null;
+    [SerializeField] private Image timeFillBar = null;
 
     public OwnEventSystem.GameEvent OnWaveStart, OnWaveFinished, OnLevelFinished;
 
@@ -16,6 +18,7 @@ public class WaveManager : MonoBehaviour
         if (!PauseManager.paused)
         {
             gameTime += Time.deltaTime;
+            timeFillBar.fillAmount = gameTime / levelData.levelData.duration;
             if (gameTime >= levelData.levelData.waves[waveNumber].waveTime)
             {
                 waveTime += Time.deltaTime;

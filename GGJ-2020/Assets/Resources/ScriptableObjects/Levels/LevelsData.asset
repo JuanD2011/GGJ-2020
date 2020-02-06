@@ -17,7 +17,7 @@ MonoBehaviour:
     pavementModulesNumber: 2
     idleEnemies:
     - id: enemy_normal
-      probability: 0.6
+      probability: 0.5
     - id: enemy_cat
       probability: 0
     - id: enemy_grandma
@@ -29,7 +29,7 @@ MonoBehaviour:
       waveDuration: 10
       waveEnemies:
       - id: enemy_normal
-        probability: 0.5
+        probability: 0.6
       - id: enemy_cat
         probability: 0
       - id: enemy_grandma

@@ -4,9 +4,10 @@ public class PauseManager : MonoBehaviour
 {
     public static bool paused = false;
 
-    public void SwitchPause()
+    private void OnEnable()
     {
-        if (paused) paused = false;
-        else paused = true;
+        paused = false;
     }
+
+    public void SwitchPause(bool _value) => paused = _value;
 }
